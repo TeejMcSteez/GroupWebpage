@@ -1,60 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Bio</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Team Bio</title>
+        <link rel="stylesheet" href="styles.css" />
+        <!-- Link to external CSS file -->
+    </head>
+    <body>
+        <header>
+            <h1>Meet Our Team</h1>
+            <!-- Example team logo -->
+            <img src="img/team-logo.png" alt="Team Logo" class="team-logo" />
 
-<header>
-    <h1>Meet Our Team</h1>
-    <!-- Example team logo -->
-    <img src="img/team-logo.png" alt="Team Logo" class="team-logo">
+            <!-- Navigation menu to switch between sections -->
+            <nav>
+                <button onclick="showSection('bios')">Team Bios</button>
+                <button onclick="showSection('vision')">Team Vision</button>
+            </nav>
+        </header>
 
-    <!-- Navigation menu to switch between sections -->
-    <nav>
-        <button onclick="showSection('bios')">Team Bios</button>
-        <button onclick="showSection('vision')">Team Vision</button>
-    </nav>
-</header>
-
-<!-- Team bios section (default section) -->
-<div id="bios" class="container">
-    <!-- Each card represents an individual team member -->
-    <div class="card">
-        <h2>Ritika M.</h2>
-        <p>Scrum Mistress</p>
-        <button onclick="toggleBio('bio1')">Show Bio</button>
-        <div id="bio1" class="bio">
-            <p id="bio1" class="bio">Ritika is the designated scrum master for this group, which basically means she oversees project management. </p>
-            <img src="img/raremanticorepfp.png" alt="pfp" width="100" height="100">
-            <h3> Moodboard </h3>
-            <a href="https://github.com/raremanticore"> Github </a>
-            <p> Inspiration: Ada Lovelace, widely regarded as one of the first computer scientists. </p>
-            <img src="img/adalovelace.png" alt="Ada Lovelace" height="100">
-        </div>
-    </div>
-
-    <div class="card">
-        <h2>Tommy Hall</h2>
-        <p>Fullstack Developer</p>
-        <button onclick="toggleBio('bio2')">Show Bio</button>
-        <div id="bio2" class="bio">
-            <div>
-                <a href="https://teejmcsteez.tech/" target="_blank" ><img src="./img/teejmcsteez/avatar1.jpg" class="avatar" alt="avatar"/></a>
+        <!-- Team bios section (default section) -->
+        <div id="bios" class="container">
+            <!-- Each card represents an individual team member -->
+            <div class="card">
+                <h2>Ritika M.</h2>
+                <p>Scrum Mistress</p>
+                <button onclick="toggleBio('bio1')">Show Bio</button>
+                <div id="bio1" class="bio">
+                    <p id="bio1" class="bio">
+                        Ritika is the designated scrum master for this group,
+                        which basically means she oversees project management.
+                    </p>
+                    <img
+                        src="img/raremanticorepfp.png"
+                        alt="pfp"
+                        width="100"
+                        height="100"
+                    />
+                    <h3>Moodboard</h3>
+                    <a href="https://github.com/raremanticore"> Github </a>
+                    <p>
+                        Inspiration: Ada Lovelace, widely regarded as one of the
+                        first computer scientists.
+                    </p>
+                    <img
+                        src="img/adalovelace.png"
+                        alt="Ada Lovelace"
+                        height="100"
+                    />
+                </div>
             </div>
-            <div id="moodboard" class="moodboard">
-                <h1>Moodboard</h1>
-                <div>
-                    <a href="https://www.youtube.com/@ThePrimeagen" target="_blank" style="text-decoration: none; color: black; font-style: italic;">ThePrimeagen</a>
-                    <p style="text-decoration: underline;">Media Inspiration</p>
 
-                </div> 
-                <div>
-                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"><img src="./img/teejmcsteez/js.png" alt="JavaScript Logo" style="max-width: 50%;"/></a>
-                    <p style="text-decoration: underline;">Favorite Language</p>
+            <div class="card">
+                <h2>Tommy Hall</h2>
+                <p>Fullstack Developer</p>
+                <button onclick="toggleBio('bio2')">Show Bio</button>
+                <div id="bio2" class="bio">
+                    <div>
+                        <a href="https://teejmcsteez.tech/" target="_blank"
+                            ><img
+                                src="./img/teejmcsteez/avatar1.jpg"
+                                class="avatar"
+                                alt="avatar"
+                        /></a>
+                    </div>
+                    <div id="moodboard" class="moodboard">
+                        <h1>Moodboard</h1>
+                        <div>
+                            <a
+                                href="https://www.youtube.com/@ThePrimeagen"
+                                target="_blank"
+                                style="
+                                    text-decoration: none;
+                                    color: black;
+                                    font-style: italic;
+                                "
+                                >ThePrimeagen</a
+                            >
+                            <p style="text-decoration: underline">
+                                Media Inspiration
+                            </p>
+                        </div>
+                        <div>
+                            <a
+                                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                                target="_blank"
+                                ><img
+                                    src="./img/teejmcsteez/js.png"
+                                    alt="JavaScript Logo"
+                                    style="max-width: 50%"
+                            /></a>
+                            <p style="text-decoration: underline">
+                                Favorite Language
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <h2>Angel Villar Nolasco</h2>
+                <p>Developer</p>
+                <button onclick="toggleBio('bio3')">Show Bio</button>
+                <p id="bio3" class="bio">
+                    Hey there! I'm Angel. Im one of the developers behind Scrum
+                    Lords, and my task its to bring real-life problems and
+                    software solutions toguether. Also, Im the inforcer of the
+                    Scrum Mistress' rule over these lands.
+                </p>
+            </div>
+            <div class="card">
+                <h2>Brendon Kaas</h2>
+                <p>Product Owner</p>
+                <button onclick="toggleBio('bio5')">Show Bio</button>
+                <div id="bio5" class="bio">
+                    <img
+                        src="img/brendonk/brendonpfp.png"
+                        class="avatar"
+                        alt="Brendon's Avatar"
+                    />
+                    <p>
+                        I'm Brendon — the Product Owner of the group. So I will
+                        be making sure our Development team is delivering a
+                        product that meets stakeholder needs.
+                    </p>
+                    <div class="Moodboard">
+                        <h3>Machine Learning</h3>
+                        <a
+                            href="https://satirist.org/learn-game/"
+                            target="_blank"
+                            style="display: inline-block; margin-top: 10px"
+                        >
+                            <img
+                                src="img/brendonk/machinelearning.jpg"
+                                alt="Super Mario Machine Learning"
+                                style="max-width: 120px; border-radius: 8px"
+                            />
+                        </a>
+                        <div>
+                            <a
+                                href="https://code.visualstudio.com/docs/languages/python"
+                                target="_blank"
+                                ><img
+                                    src="./img/brendonk/Python.svg.png"
+                                    alt="Python Logo"
+                                    style="max-width: 50%"
+                            /></a>
+                            <p style="text-decoration: underline">
+                                Favorite Language
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card ameer-style">
+                <h2>Ameer Khan</h2>
+                <p>Developer</p>
+                <button onclick="toggleBio('bio4')">Show Bio</button>
+                <div id="bio4" class="bio">
+                    <img
+                        src="img/ameer/avatar.jpg"
+                        class="avatar"
+                        alt="Ameer's Avatar"
+                    />
+                    <p>
+                        I'm Ameer — the humble developer 🧑‍💻 in this group who
+                        follows the sacred commandments of the Scrum Mistress
+                        and the almighty Product Owner. My job? To take vague
+                        ideas, random Slack messages, and last-minute tasks...
+                        and turn them into functioning code (usually with coffee
+                        ☕ and panic 😅). I write the code, fix the bugs, and
+                        try not to break production. It's a fun life.
+                    </p>
+                    <div class="moodboard">
+                        <h3>VR Projects</h3>
+                        <a
+                            href="https://about.meta.com/en-us/quest/"
+                            target="_blank"
+                            style="display: inline-block; margin-top: 10px"
+                        >
+                            <img
+                                src="img/ameer/meta-vr-logo.png"
+                                alt="Meta VR Logo"
+                                style="max-width: 120px; border-radius: 8px"
+                            />
+                        </a>
+                        <p
+                            style="
+                                font-size: 0.9em;
+                                color: #555;
+                                margin-top: 5px;
+                            "
+                        >
+                            Passionate about creating immersive VR/MR
+                            experiences inspired by Meta's vision.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -98,34 +240,19 @@
           </div>
       </div>
   </div>
-
-  <div class="card ameer-style">
-    <h2>Ameer Khan</h2>
-    <p>Developer</p>
-    <button onclick="toggleBio('bio4')">Show Bio</button>
-    <div id="bio4" class="bio">
-        <img src="img/ameer/avatar.jpg" class="avatar" alt="Ameer's Avatar">
-        <p>I'm Ameer — the humble developer 🧑‍💻 in this group who follows the sacred commandments of the Scrum Mistress and the almighty Product Owner. My job? To take vague ideas, random Slack messages, and last-minute tasks... and turn them into functioning code (usually with coffee ☕ and panic 😅). I write the code, fix the bugs, and try not to break production. It's a fun life.</p>
-        <div class="moodboard">
-            <h3>VR Projects</h3>
-            <a href="https://about.meta.com/en-us/quest/" target="_blank" style="display: inline-block; margin-top: 10px;">
-                <img src="img/ameer/meta-vr-logo.png" alt="Meta VR Logo" style="max-width: 120px; border-radius: 8px;">
-            </a>
-            <p style="font-size: 0.9em; color: #555; margin-top: 5px;">
-                Passionate about creating immersive VR/MR experiences inspired by Meta's vision.
+        <!-- Team vision/mission statement section (hidden by default) -->
+        <div id="vision" class="container" style="display: none">
+            <h2>Our Mission Statement</h2>
+            <p>
+                We strive to create a collaborative, inclusive, and innovative
+                environment where team members feel empowered to push boundaries
+                and achieve excellence in their craft. Our mission is to deliver
+                high-quality solutions that meet and exceed our clients'
+                expectations.
             </p>
         </div>
-    </div>
-  </div>
-</div>
 
-<!-- Team vision/mission statement section (hidden by default) -->
-<div id="vision" class="container" style="display: none;">
-    <h2>Our Mission Statement</h2>
-    <p>We strive to create a collaborative, inclusive, and innovative environment where team members feel empowered to push boundaries and achieve excellence in their craft. Our mission is to deliver high-quality solutions that meet and exceed our clients' expectations.</p>
-</div>
-
-<script src="script.js"></script> <!-- Link to external JavaScript file -->
-
-</body>
+        <script src="script.js"></script>
+        <!-- Link to external JavaScript file -->
+    </body>
 </html>
